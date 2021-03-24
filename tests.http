@@ -1,4 +1,6 @@
-// Create Course
+# A collection of test for Project 9 in the Full Stack JavaScript Techdegree
+
+### Create Course (Minimum Data)
 POST http://localhost:5000/api/courses HTTP/1.1
 Authorization: Basic joe@smith.com:joepassword
 Content-Type: application/json
@@ -9,5 +11,5 @@ Content-Type: application/json
   "userId": 1
 }
 
-# // GET COURSES
-# GET http://localhost:5000/api/courses HTTP/1.1
+### Get Courses
+GET http://localhost:5000/api/courses HTTP/1.1
