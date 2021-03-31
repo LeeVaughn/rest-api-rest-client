@@ -1,5 +1,6 @@
 # A collection of test for Project 9 in the Full Stack JavaScript Techdegree
 
+
 # Tests for the User Routes section of the rubric
 
 ### Get User (With Auth)
@@ -30,12 +31,14 @@ Content-Type: application/json
   "password": "password"
 }
 
+
 # Tests for the Course Routes section of the rubric
 
 ### Get Courses
 GET http://localhost:5000/api/courses HTTP/1.1
 
 ### Get Course
+GET http://localhost:5000/api/courses/1 HTTP/1.1
 
 ### Create Course (Minimum Data)
 POST http://localhost:5000/api/courses HTTP/1.1
@@ -49,8 +52,21 @@ Content-Type: application/json
 }
 
 ### Update Course (Minimum Data)
+PUT http://localhost:5000/api/courses/1 HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+	"id": 1,
+  "title": "Updated course!",
+  "description": "The course description has been updated as well.",
+  "userId": 1
+}
 
 ### Delete Course (With Auth)
+DELETE http://localhost:5000/api/courses/1 HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+
 
 # Tests for the Validations section of the rubric
 
