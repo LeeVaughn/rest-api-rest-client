@@ -96,8 +96,23 @@ Content-Type: application/json
 }
 
 ### Create Course (Incomplete Data)
+POST http://localhost:5000/api/courses HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+
+}
 
 ### Update Course (Incomplete Data)
+PUT http://localhost:5000/api/courses/1 HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": ""
+}
 
 ### Create User (Invalid Email)
 POST http://localhost:5000/api/users HTTP/1.1
