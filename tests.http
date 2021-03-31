@@ -67,6 +67,22 @@ Content-Type: application/json
 DELETE http://localhost:5000/api/courses/1 HTTP/1.1
 Authorization: Basic joe@smith.com:joepassword
 
+### Update Course (Does Not Own)
+PUT http://localhost:5000/api/courses/3 HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+Content-Type: application/json
+
+{
+	"id": 3,
+  "title": "Updated course!",
+  "description": "The course description has been updated as well.",
+  "userId": 1
+}
+
+### Delete Course (Does Not Own)
+DELETE http://localhost:5000/api/courses/3 HTTP/1.1
+Authorization: Basic joe@smith.com:joepassword
+
 
 # Tests for the Validations section of the rubric
 
