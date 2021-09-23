@@ -38,11 +38,12 @@ const authenticateUser = async (req, res, next) => {
   if (message) {
     console.warn(message);
 
-    res.status(401).json({ message: "Access Denied" }).end;
+    res.status(401).json({ message: "Access Denied" }).end();
+  } else {
+    // if user authentication has succeeded...
+    next();
   }
 
-  // if user authentication has succeeded...
-  next();
 }
 
 module.exports = authenticateUser;
